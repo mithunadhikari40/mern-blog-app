@@ -84,7 +84,7 @@ const ReadListPage = () => {
 
                     <div className="readList-story-wrapper">
 
-                        {readList.length !== 0 ?
+                        {readList?.length > 0?
                             <>
                                 {readList.map(story => {
                                     return (

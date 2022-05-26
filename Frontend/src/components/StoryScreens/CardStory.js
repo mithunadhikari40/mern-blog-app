@@ -31,7 +31,7 @@ const Story = ({ story }) => {
 
                     <h5 className="story-title">
                         
-                    {story.title.length > 76 ? truncateTitle(story.title)+"..." : story.title
+                    {story?.title?.length > 76 ? truncateTitle(story.title)+"..." : story.title
                     
                     }
                     </h5>
