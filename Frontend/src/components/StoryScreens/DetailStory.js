@@ -171,7 +171,7 @@ const DetailStory = () => {
                   <ul>
                     {story.author &&
                       <li className='story-author-info'>
-                        <img src={`/userPhotos/${story.author.photo}`} alt={story.author.username} />
+                        <img src={`${process.env.REACT_APP_BASE_URL}/userPhotos/${story.author.photo}`} alt={story.author.username} />
                         <span className='story-author-username'>{story.author.username}  </span>
                       </li>
                     }
@@ -231,7 +231,7 @@ const DetailStory = () => {
               <div className='story-content' >
 
                 <div className="story-banner-img">
-                  <img src={`/storyImages/${story.image}`} alt={story.title} />
+                  <img src={`${process.env.REACT_APP_BASE_URL}/storyImages/${story.image}`} alt={story.title} />
 
                 </div>
 

@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
 .Inclusive-addStory-page {
-    width: 1000px;
+    width: 95%;
     margin: 1.2rem auto;
+    height: 125%;
 }
 
 @media only screen and (max-width: 1001px) {
@@ -12,7 +13,8 @@
 
 .Inclusive-addStory-page .addStory-form {
     position: relative;
-    width: 650px;
+    width: 95%;
+    height: 125%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -20,7 +22,7 @@
 }
 
 .addStory-form input#title {
-    width: 100%;
+    width: 90%;
     height: 55px;
     outline: 0;
     border: none;
@@ -34,6 +36,7 @@
 
 .ck-editor {
     margin-bottom: 1rem !important;
+    width: 90%;
 }
 
 @media only screen and (max-width: 651px) {
@@ -56,6 +59,7 @@
 }
 
 .ck-content {
+    width: 90%;
     border: rgb(235, 235, 235) solid 1px !important;
 }
 
@@ -65,7 +69,9 @@
 }
 
 .ck-editor__editable {
-    height: 250px;
+    min-height: 500px;
+    min-width: 900px;
+    width: 90%;
     padding: 0.5rem 1rem !important;
 }
 

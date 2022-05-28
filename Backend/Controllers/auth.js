@@ -15,31 +15,32 @@ const getPrivateData = asyncErrorWrapper((req, res, next) => {
     user: req.user,
   });
 });
-const makeUserAdmin = asyncErrorWrapper(async (req, res, next) => {
-  const { email, password, secretKey } = req.body;
 
-  if (!validateUserInput(email, password)) {
-    return next(new CustomError("Please check your inputs", 400));
-  }
+// const makeUserAdmin = asyncErrorWrapper(async (req, res, next) => {
+//   const { email, password, secretKey } = req.body;
 
-  if (secretKey != "My Name is Mithun Adhikari. I am from Nepal. I am good") {
-    return next(new CustomError("Invalid Request", 400));
-  }
+//   if (!validateUserInput(email, password)) {
+//     return next(new CustomError("Please check your inputs", 400));
+//   }
 
-  const user = await User.findOne({ email }).select("+password");
+//   if (secretKey != "My Name is Mithun Adhikari. I am from Nepal. I am good") {
+//     return next(new CustomError("Invalid Request", 400));
+//   }
 
-  if (!user) {
-    return next(new CustomError("Invalid credentials", 404));
-  }
-  user.role = "admin";
-  await user.save();
+//   const user = await User.findOne({ email }).select("+password");
 
-  return res.status(200).json({
-    success: true,
-    message: "You got access to the private data in this route ",
-    user: req.user,
-  });
-});
+//   if (!user) {
+//     return next(new CustomError("Invalid credentials", 404));
+//   }
+//   user.role = "admin";
+//   await user.save();
+
+//   return res.status(200).json({
+//     success: true,
+//     message: "You got access to the private data in this route ",
+//     user: req.user,
+//   });
+// });
 
 const register = asyncErrorWrapper(async (req, res, next) => {
   const { username, email, password } = req.body;

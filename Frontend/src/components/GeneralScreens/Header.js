@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import SearchForm from "./SearchForm";
 import "../../Css/Header.css";
 import { RiPencilFill } from "react-icons/ri";
@@ -33,12 +33,15 @@ const Header = () => {
     <div>
       <header>
         <div className="averager">
-            
-        {activeUser?.role !== "admin" ?  <Link className="readList-link" to="#">
-              {''}
-            <FcHome /> <h5>Portfolio</h5>
-            {''}
-          </Link> :<div/>}
+          {activeUser?.role !== "admin" ? (
+            <a className="readList-link"   href='https://mithunadhikari.com.np' target="_blank" rel="noreferrer" >
+              {""}
+              <FcHome /> <h5>Portfolio</h5>
+              {""}
+            </a>
+          ) : (
+            <div />
+          )}
 
           <Link to="/" className="logo">
             <h5>MITHUN'S BLOG</h5>
@@ -65,7 +68,7 @@ const Header = () => {
                     <SkeletonElement type="minsize-avatar" />
                   ) : (
                     <img
-                      src={`/userPhotos/${activeUser.photo}`}
+                      src={`${process.env.REACT_APP_BASE_URL}/userPhotos/${activeUser.photo}`}
                       alt={activeUser.username}
                     />
                   )}

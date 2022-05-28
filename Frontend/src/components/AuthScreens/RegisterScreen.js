@@ -68,7 +68,7 @@ const RegisterScreen = () => {
           </div>
 
           <div className="top-register-explain">
-            <h2>Welcome to Mern Blog </h2>
+            <h2>Welcome to Tech Blog </h2>
 
             <p>
               It's easy and free to post your thinking on any topic and connect with thounsands of readers.

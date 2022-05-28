@@ -16,7 +16,7 @@ router.post("/forgotpassword",forgotpassword)
 router.put("/resetpassword",resetpassword)
 
 router.get("/private",getAccessToRoute,getPrivateData)
-router.post("/makeadmin",getAccessToRoute,makeUserAdmin)
+// router.post("/makeadmin",getAccessToRoute,makeUserAdmin)
 
 
 

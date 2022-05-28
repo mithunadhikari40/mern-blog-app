@@ -69,7 +69,7 @@ const Profile = () => {
                                 </div>
                             </li>
                             <li>
-                                <span>E-Mail</span>
+                                <span>E-mail</span>
                                 <div>
                                     {user.email}
                                 </div>
